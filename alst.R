@@ -1,3 +1,18 @@
+me<-mean(train$loss)
+sd<-sd(train$loss)
+xt<-train$loss>me-1*sd
+train1<-train[xt,]
+ 
+train<-train1
+testm<-data.matrix(test[,2:131])
+trainm<-data.matrix(train[,2:132])
+ 
+trainm[,131]<-log(trainm[,131])
+dtrain = xgb.DMatrix(trainm[,1:130], label=trainm[,131])
+dtest = xgb.DMatrix(testm)
+
+
+
 xgb_params = list(
     colsample_bytree = 0.7,
     subsample = 0.7,
