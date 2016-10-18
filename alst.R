@@ -13,7 +13,7 @@ dtest = xgb.DMatrix(testm)
 
 
 
-gb_params = list(
+xgb_params = list(
     colsample_bytree = 0.7,
     subsample = 0.7,
     eta = 0.05,
