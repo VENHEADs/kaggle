@@ -29,4 +29,4 @@ testx[,2]<-pre
 write.csv(testx,"base8_nr900_p10¬_cleaned.csv",row.names = FALSE)	
 
 
-gbdt = xgboost(data =trainm[,1:130],label = trainm[,131], nrounds=600,nfold=6,colsample_bytree = 0.7,subsample = 0.7,eta = 0.05,objective = 'reg:linear',max_depth = 8,num_parallel_tree = 10,min_child_weight = 3,base_score =8)
+gbdt = xgboost(data =trainm[,1:130],label = trainm[,131], nrounds=8000,nfold=6,colsample_bytree = 0.7,subsample = 0.7,eta = 0.05,objective = 'reg:linear',max_depth = 8,num_parallel_tree = 10,min_child_weight = 3,base_score =8, print.every.n=100)
