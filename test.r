@@ -1,4 +1,4 @@
-xgb _params = list(
+xgb_params = list(
     colsample_bytree = 0.7,
     subsample = 0.7,
     eta = 0.05,
@@ -13,7 +13,7 @@ pre = exp(predict(gbdt,dtest))
 testx[,2]<-pre
 write.csv(testx,"base2_nr8000_p10¬_cleaned_both.csv",row.names = FALSE)
 
-xgb _params = list(
+xgb_params = list(
     colsample_bytree = 0.7,
     subsample = 0.7,
     eta = 0.05,
@@ -28,7 +28,7 @@ pre = exp(predict(gbdt,dtest))
 testx[,2]<-pre
 write.csv(testx,"base4_nr8000_p10¬_cleaned_both.csv",row.names = FALSE)
 
-xgb _params = list(
+xgb_params = list(
     colsample_bytree = 0.7,
     subsample = 0.7,
     eta = 0.05,
