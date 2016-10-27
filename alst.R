@@ -1,6 +1,6 @@
 me<-mean(train$loss)
 sd<-sd(train$loss)
-xt<-train$loss>me-1*sd
+xt<-train$loss<me-1*sd
 train1<-train[xt,]
  
 train<-train1
